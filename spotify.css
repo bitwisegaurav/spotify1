@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Ubuntu+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Roboto+Mono:wght@500&family=Ubuntu+Condensed&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightgreen;
+  }
+nav {
+    display: flex;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    /* border: 2px solid red; */
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border: 2px solid red; */
+}
+
+nav ul li {
+    list-style: none;
+    /* border: 2px solid red; */
+    margin: 0 20px;
+    font-size: large;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.container {
+    min-height: 70vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 12px;
+    padding: 34px;
+    background-image: url('images/bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: 85vw 100%;
+}
+
+.bottom {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    height: 100px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+}
+#songpic{
+    position: absolute;
+    left: 2%;
+    bottom:20%;
+    transition: 1s;
+    width: 70px;
+    aspect-ratio: 1;
+    /* opacity: 1; */
+    border-radius: 50%;
+    /* z-index: 99; */
+    /* border: 2px solid red; */
+}
+.play{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.play img{
+    width: 30px;
+    cursor: pointer;
+    filter: invert(100%);
+}
+#next{
+    width: 20px;
+    margin: 0 18%;
+}
+#previous{
+    width: 20px;
+    transform: scale(-1);
+    margin: 0 20%;
+}
+
+#myProgressBar {
+    width: 80vw;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.songList h1{
+    margin-bottom: 50px;
+    font-family: 'Inconsolata', monospace;
+    font-size: 40px;
+}
+
+.songItem span{
+    font-family: 'Roboto Mono', monospace;
+    /* font-family: 'Ubuntu Condensed', sans-serif; */
+    font-size: large;
+}
+
+.songItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    width: 90%;
+    padding: 2px 10px;
+    background-color: white;
+    color: black;
+    border-radius: 44px;
+    margin: 10px 0;
+    /* border: 2px solid red; */
+}
+
+.songItem img {
+    height: 45px;
+    margin: 0 13px;
+    width: 45px;
+    border-radius: 50%;
+}
+.timestamp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 30px; */
+    /* border: 2px solid red; */
+}
+.songListPlay{
+    display: flex;
+}
+.songListPlay img{
+    width: 20px;
+    height: 20px;
+    /* border: 2px solid red; */
+}
+#time{
+    width: 80%;
+    /* padding-top: 2px; */
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+}
+.songinfo{
+    /* position: relative; */
+    /* left: 10vw; */
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(50%);
+    font-size: 20px;
+    /* border: 2px solid red; */
+    font-family: 'Roboto Mono', monospace;
+}
+@media screen and (min-width: 700px) {
+    .songinfo{
+        position: absolute;
+        left: 10vw;
+        font-family: 'Roboto Mono', monospace;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 700px) {
+    
+    nav{
+        /* overflow: hidden; */
+        justify-content: center;
+        flex-direction: column;
+    }
+    #logoName{
+        justify-content: center;
+        /* border: 2px solid red; */
+    }
+    nav ul{
+        margin-top: 10px;
+        justify-content: center;
+    }
+    nav ul li{
+        margin: 0 10px;
+        margin-top: 14px;
+        font-size: 0.9rem;
+    }
+    .container{
+        background-size: 97vw 100%;
+    }
+    .bottom{
+        padding-top: 15px;
+    }
+    .play{
+        margin-top: 4px;
+        transform: translate(-40%, -20%);
+    }
+    #songpic{
+        display: none;
+    }
+    #time{
+        width: 90%;
+        transform: translateY(-100%);
+        /* border: 2px solid red; */
+    }
+    .songinfo{
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        width: 90vw;
+        /* margin-top: 14px; */
+    }
+    .songList h1{
+        margin-bottom: 50px;
+        font-size: 30px;
+    }
+    #myProgressBar{
+        width: 90vw;
+        margin: 0;
+    }
+    #masterSongName{
+        font-size: 25px;
+        padding: 5px 0;
+        /* border: 2px solid red; */
+        transform: translate(0%, -60%);
+    }
+    .songItem span{
+        font-size: small;
+    }
+    body {
+      background-color: red;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+nav{
+    /* overflow: hidden; */
+    justify-content: center;
+    flex-direction: column;
+}
+.play{
+    margin-top: 4px;
+    transform: translate(-40%, -50%);
+    /* margin-bottom: 10px; */
+    /* border: 2px solid red; */
+}
+#logoName{
+    justify-content: center;
+    /* border: 2px solid red; */
+}
+nav ul{
+    justify-content: center;
+}
+nav ul li{
+    margin: 0 10px;
+    margin-top: 14px;
+    font-size: 0.9rem;
+}
+.container{
+    background-size: 97vw 100%;
+}
+.songinfo{
+    display: flex;
+    width: 90vw;
+    justify-content: center;
+}
+.bottom{
+    /* border: 2px solid red; */
+    padding-top: 15px;
+}
+.songList h1{
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+#songpic{
+    display: none;
+}
+#time{
+    width: 90%;
+    transform: translateY(-100%);
+    /* border: 2px solid red; */
+}
+#myProgressBar{
+    width: 90vw;
+}
+#masterSongName{
+    font-size: 25px;
+    padding: 5px 0;
+    /* border: 2px solid red; */
+    transform: translate(0%, -80%);
+}
+.songItem span{
+    font-size: small;
+}
+body{
+        background-color: lightgreen;
+}
+}
