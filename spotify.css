@@ -29,6 +29,12 @@ nav ul li {
     /* border: 2px solid red; */
     margin: 0 20px;
     font-size: large;
+    cursor: pointer;
+}
+
+nav ul li:hover{
+    color: lightgreen;
+    transition: 0.3s;
 }
 
 .logo {
@@ -37,6 +43,7 @@ nav ul li {
     font-size: 2rem;
     font-weight: 900;
     font-family: 'Ubuntu Condensed', sans-serif;
+    pointer-events: none;
 }
 
 .container {
@@ -129,7 +136,10 @@ nav ul li {
     margin: 10px 0;
     /* border: 2px solid red; */
 }
-
+.songName{
+    text-align: center;
+    pointer-events: none;
+}
 .songItem img {
     height: 45px;
     margin: 0 13px;
@@ -140,6 +150,8 @@ nav ul li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 10px;
+    pointer-events: none;
     /* height: 30px; */
     /* border: 2px solid red; */
 }
@@ -149,6 +161,7 @@ nav ul li {
 .songListPlay img{
     width: 20px;
     height: 20px;
+    cursor: pointer;
     /* border: 2px solid red; */
 }
 #time{
@@ -239,9 +252,6 @@ nav ul li {
     .songItem span{
         font-size: small;
     }
-    body {
-      background-color: red;
-    }
   }
 
 @media screen and (max-width: 600px) {
@@ -252,7 +262,7 @@ nav{
 }
 .play{
     margin-top: 4px;
-    transform: translate(-40%, -50%);
+    transform: translate(-40%, -30%);
     /* margin-bottom: 10px; */
     /* border: 2px solid red; */
 }
@@ -296,10 +306,13 @@ nav ul li{
     width: 90vw;
 }
 #masterSongName{
-    font-size: 25px;
+    font-size: 20px;
     padding: 5px 0;
     /* border: 2px solid red; */
-    transform: translate(0%, -80%);
+    transform: translate(0%, -90%);
+}
+.songItem .songName{
+    font-size: 0.7rem;
 }
 .songItem span{
     font-size: small;

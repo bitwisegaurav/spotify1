@@ -39,7 +39,9 @@ function rotating() {
 }
 
 // Handle play/pause click
-masterPlay.addEventListener('click', () => {
+masterPlay.addEventListener('click', playing);
+
+function playing() {
     if (audioElement.paused || audioElement.currentTime <= 0) {
         audioElement.play();
         masterSongName.innerText = songs[index].songName;
@@ -69,7 +71,7 @@ masterPlay.addEventListener('click', () => {
         })
         // gif.style.opacity = 0;
     }
-})
+}
 
 // Listen to events
 audioElement.addEventListener('timeupdate', () => {
